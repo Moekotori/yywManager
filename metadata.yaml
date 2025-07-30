@@ -1,0 +1,7 @@
+name: yinyouwo
+version: 1.0.1
+author: akkariin
+desc: |
+  音游窝系统插件 v1.0.1
+  功能：入场扣费、退场记录、充值、余额查询、排行榜。
+repo: https://github.com/your_repo/yinyouwo
