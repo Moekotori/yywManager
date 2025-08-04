@@ -9,19 +9,16 @@ import math
 from datetime import date
 from typing import Any, Dict, Optional
 
-# 插件标识
 PLUGIN_NAME = "yinyouwo"
-VERSION = "v1.8.2"  # 语法修正最终版
+VERSION = "v2.3.3
 AUTHOR = "akkariin"
 
 # --- 配置项 ---
 HOURLY_FEE = 6.0  # 每小时 6 元
 GRACE_PERIOD_SECONDS = 120  # 2分钟内的退勤为免费
 
-# [安全建议]：为了更好的安全性，建议将管理员列表移至配置文件中，而不是硬编码在代码里。
 ADMIN_IDS = {"2331103944", "87654321"}
 
-# --- 内部常量 ---
 FEE_PER_30_MINS = HOURLY_FEE / 2  # 每 30 分钟的费用
 
 # 数据目录和 SQLite 文件
@@ -408,7 +405,7 @@ class YinyouwoPlugin(Star):
     async def cmd_help(self, evt: AstrMessageEvent) -> MessageEventResult:
         if init_error := self._check_init(): return init_error
         return evt.plain_result(
-            f"🎵 音游窝系统 v{VERSION} 🎵\n\n"
+            f"🎵 rinNet v{VERSION} 🎵\n\n"
             "【用户指令】\n"
             " • 出勤  (开始计时)\n"
             " • 退勤  (结束计时并结算)\n"
